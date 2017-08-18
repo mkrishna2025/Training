@@ -1,0 +1,1 @@
+One javascript file can have multiple classes

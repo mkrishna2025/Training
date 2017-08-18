@@ -1,0 +1,125 @@
+Object Oriented Javascript
+	Creating
+		Class
+		Constructor
+		Fields
+	Small UI Framework which is similar to React
+	
+React 
+	Web	
+	Node
+	
+Node	
+	Basics
+	Adding/Updating Modules
+	React with Node
+	
+Node 
+	Express
+	
+
+Day 1
+typeof
+Viewing
+	Alert
+	console.log
+
+var - default keyword for creating variables - variant
+variable can be created for type of
+	Number
+	String
+	Object
+	Function
+	
+	
+function Addition( x, y){
+	return x + y;
+}
+
+var Addition = function(x, y){
+	return x + y;
+}
+
+var isFunctionExists = function(type){
+	return type != "undefined";
+}
+
+var exists = isFunctionExists(typeof(Subtrac));
+console.log(exists);
+
+var isNumeric = function(value){
+	return typeof(value) == 'number';
+}
+
+Assignment -> isString
+		   -> isBool
+
+// Creating object
+	Key Value pair
+	Key - String
+	Value - Object
+		  - Nested Object
+		  - Any primitive types ( Number, String..)
+		  - Function
+		  - Nested Function
+		  
+	retrieval - object.key or object[key]
+	
+		  
+var calculator = {
+	addition: function(x, y){
+		return x + y;
+	},
+	subtraction: function(x, y){
+		return x - y;
+	}
+}; 
+Assignment -> Multiplication
+		   -> Division
+		   
+		   -> Add drop down having items Add, Sub, Div, Mul. Based on selection, calculate C
+		   
+		   
+// Day 2
+Creating a class and one public method
+var Calculations = function(){
+	return {
+		// Public method
+		Addition: function(x, y) {
+			return x +y;
+		}
+	}
+}
+var obj = new Calculations(1, 5);
+var sum = obj.Addition();
+console.log(sum);
+
+// Creating a class with Constructor and accessing those values inside other function. Here x and y are like global variables to class.
+var Calculations2 = function(x, y){
+	return {
+		Addition: function() {
+			return x + y;
+		}
+	}
+}
+var obj = new Calculations2(1, 5);
+var sum = obj.Addition();
+console.log(sum);
+
+// Arrays
+var students = ["A", "B", "C", "D"];
+for(var index in students){
+	var student = students[index];
+	console.log(student);
+}
+
+var ArrayCalculator = function(){
+	return {
+		printArray: function(items){
+			for(var index in items){
+				var item = items[index];
+				console.log(item);
+			}
+		}
+	};
+}

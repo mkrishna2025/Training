@@ -1,0 +1,27 @@
+<html>
+<header>
+	<script type="text/javascript">
+		//alert('Hello');
+	</script>
+	<script type="text/javascript" src="testscript.js"></script>
+	<script type="text/javascript" src="calculator.js"></script>
+	<script type="text/javascript">
+		function buttonClick(){
+			//alert('Button is pressed');
+			/*var a = document.getElementById('A').value;
+			var b = document.getElementById('B').value;
+			var c = calculator.addition(a, b);*/
+			
+			var c = calculator.additionFromControl('A', 'B');
+			document.getElementById('C').value = c;
+		}
+	</script>
+</header>
+<body onLoad="javascript:showAlert()">
+	This is first page
+	<input type="textbox" id="A" />
+	<input type="textbox" id="B" />
+	<input type="textbox" id="C" />
+	<input type="button"  value="Calculate" onClick="javascript:buttonClick()" />
+</body>
+</html>

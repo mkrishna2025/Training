@@ -1,0 +1,42 @@
+<html>
+<header>
+	<script type="text/javascript" src="Framework 2.0.js"></script>
+	<script type="text/javascript">
+		function buttonClick(){
+			Framework.Disable('button1');
+			
+			Framework.create({
+					type: 'container',
+					render: 'DynamicDiv',
+					style: 'width:250px;height:200px;background-color:Orange;',
+					items: [
+						{
+							type: 'label',
+							text: 'User Name'
+						},
+						{
+							type: 'textBox'
+						},
+						{
+							type: 'label',
+							text: 'Password'
+						},
+						{
+							type: 'textBox'
+						},
+						{
+							type: 'button',
+							text: 'Submit'
+						}
+					]
+				}
+			);
+		}
+	</script>
+</header>
+<body>
+	This is dynamic page
+	<input type="button" name="button1"  value="Create Container" onClick="javascript:buttonClick()" />
+	<div id="DynamicDiv" > </div>
+</body>
+</html>
