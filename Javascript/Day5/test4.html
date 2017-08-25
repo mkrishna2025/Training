@@ -1,0 +1,43 @@
+<html>
+<header>
+	<script type="text/javascript" src="Framework 2.0.js"></script>
+	<script type="text/javascript">
+		function buttonClick(){
+			var instance = new Framework.UIControls();
+			
+			//document.getElementById('button1').disabled = true;
+			
+			/*var button = Framework.GetCmp('button1');
+			button.disabled = true;*/
+			
+			Framework.Disable('button1');
+			
+			/*var container = document.getElementById('DynamicDiv');
+			container.appendChild(instance.createPanel({style:"width:200px;height:200px;background-color:yellow;"}));*/
+			
+			Framework.create({
+					type: 'button',
+					render: 'DynamicDiv'
+				}
+			);
+			
+			//container.appendChild(instance.createPanel());
+			/*container.appendChild(instance.createTextBox()); 
+			container.appendChild(instance.createButton('Submit'));
+			container.appendChild(instance.createDropDown(["Addition","Subtraction","Multiplication","Division"]));*/
+		}
+	</script>
+</header>
+<body>
+	This is dynamic page
+	<input type="button" name="button1"  value="Create Container" onClick="javascript:buttonClick()" />
+	<div id="DynamicDiv" > </div>
+	<!--<select name="drop1" id="Select1">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+		<option value="mercedes">Mercedes</option>
+		<option value="audi">Audi</option>
+	</select>
+	-->
+</body>
+</html>

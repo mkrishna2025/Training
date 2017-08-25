@@ -1,0 +1,138 @@
+<html>
+<header>
+	<script type="text/javascript" src="Framework 2.0.js"></script>
+	<script type="text/javascript">
+		function buttonClick(){
+			Framework.Disable('button1');
+			
+			Framework.create({
+					type: 'container',
+					render: 'DynamicDiv',
+					id: 'NewDynamicDiv',
+					style: 'width:250px;height:200px;background-color:Orange;',
+					items: [
+						{
+							type: 'label',
+							text: 'User Name'
+						},
+						{
+							type: 'textBox',
+							listeners: {
+								keydown: function(e){
+									alert('Key Down');
+								}
+							}
+						},
+						{
+							type: 'label',
+							text: 'Password'
+						},
+						{
+							type: 'textBox'
+						},
+						{
+							type: 'button',
+							text: 'Submit',
+							listeners: {
+								click: function(e){
+									debugger;
+									alert('Button Clicked');
+								},
+								mouseover: function(e){
+									//debugger;
+									//alert('Button Mouse Over');
+								}
+							}
+						}
+					],
+					listeners: {
+						mouseover: function (e) {
+							//alert('mouseover');
+						},
+						click: function(e){
+							alert('Click from Listener')
+						}
+					}
+				}
+			);
+			
+			/*var elem = document.getElementById('NewDynamicDiv');
+			elem.addEventListener('mouseover', function (e) {
+				//alert('mouseover');
+			}, false);
+			elem.addEventListener('click', function (e) {
+				alert('click');
+			}, false);*/
+			
+			Framework.create({
+					type: 'container',
+					render: 'DynamicDiv',
+					id: 'CalculatorDiv',
+					style: 'width:250px;height:200px;background-color:Green;alight:right',
+					items: [
+						{
+							type: 'label',
+							text: 'Value A'
+						},
+						{
+							type: 'numberBox',
+							id: 'ValueA'
+						},
+						{
+							type: 'label',
+							text: 'Value B'
+						},
+						{
+							type: 'numberBox',
+							id: 'ValueB'
+						},
+						{
+							type: 'label',
+							text: 'Calculated Value'
+						},
+						{
+							type: 'numberBox',
+							id: 'ValueC'
+						},
+						{
+							type: 'button',
+							text: 'Calculate',
+							handler: function(e){
+								//alert('Button Clicked');
+								debugger;
+								
+								/*var a = parseInt(document.getElementById('ValueA').value);
+								var b = parseInt(document.getElementById('ValueB').value);*/
+								
+								/*var a = parseInt(Framework.GetValue('ValueA'));
+								var b = parseInt(Framework.GetValue('ValueB'));*/
+								
+								/*var a = Framework.GetNumericValue('ValueA');
+								var b = Framework.GetNumericValue('ValueB');
+								
+								var c = a + b;
+								Framework.SetValue('ValueC', c);*/
+								
+								
+								
+								
+								Framework.SetValue('ValueC', Framework.GetNumericValue('ValueA') + Framework.GetNumericValue('ValueB'));
+								
+								//alert(c);
+							}
+
+						}
+					]
+				}
+			);
+			
+			
+		}
+	</script>
+</header>
+<body>
+	This is dynamic page
+	<input type="button" name="button1"  value="Create Container" onClick="javascript:buttonClick()" />
+	<div id="DynamicDiv" style="width:650px;height:200px;" > </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<html>
+<header>
+	<script type="text/javascript">
+		function buttonClick(){
+			//alert('Executed');
+			
+			var input = document.createElement('input'); 
+			input.type = "text"; 
+			//...    
+			var container = document.getElementById('DynamicDiv');
+			container.appendChild(input); 
+			
+		}
+	</script>
+</header>
+<body>
+	This is dynamic page
+	<input type="button" id="button1"  value="Create New TextBox" onClick="javascript:buttonClick()" />
+	<div id="DynamicDiv" style="background-color:red;width=200px;height=200px" > </div> 
+</body>
+</html>

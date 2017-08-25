@@ -1,0 +1,30 @@
+<html>
+<header>
+	<script type="text/javascript" src="Framework 2.0.js"></script>
+	<script type="text/javascript">
+		function buttonClick(){
+			var obj = new Framework.FArray();
+			obj.add('Arjun');
+			obj.add('Krishna');
+			console.log(obj.size());
+			
+			
+			var obj2 = new Framework.FNumericArray();
+			obj2.add('Arjun');
+			obj2.add(1);
+			console.log(obj2.size());
+			
+			debugger;
+			var obj3 = new Framework.FNumericArrayInherited({items: ["B", 3]});
+			obj3.add('Arjun');
+			obj3.add(1);
+			obj3.add(2);
+			console.log(obj3.size());
+		}
+	</script>
+</header>
+<body>
+	This is dynamic page
+	<input type="button" name="button1"  value="Testing Arrays " onClick="javascript:buttonClick()" />
+</body>
+</html>

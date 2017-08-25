@@ -187,13 +187,12 @@ var Framework = {
 		}
 	},
 	Extend: function(oldClass, props){
-		return function(options){
-			oldClass.call(this, options);
-			for(var index in props){
-				var prop = props[index];
-				this[index] = prop;
-			}
-		};
+		oldClass.call(this);
+		props = props || {};
+		for(var index in props){
+			var prop = props[index];
+			this[index] = prop;
+		}
 	}
 }
 

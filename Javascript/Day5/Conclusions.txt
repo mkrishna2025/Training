@@ -1,0 +1,4 @@
+One javascript file can have multiple classes
+
+Query
+difference between append and appendChild
